@@ -1,0 +1,40 @@
+{
+  "name": "typescript-flv",
+  "version": "1.0.0",
+  "description": "typescript style rebuild flv.js",
+  "private": true,
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "file-loader": "^3.0.1",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.3",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-sources": "^1.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --config webpack.config.js",
+    "dev": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veaba/typescript-flv.js.git"
+  },
+  "keywords": [
+    "typescirpt-flv.js",
+    "flv.js"
+  ],
+  "author": "veaba",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/veaba/typescript-flv.js/issues"
+  },
+  "homepage": "https://github.com/veaba/typescript-flv.js#readme"
+}

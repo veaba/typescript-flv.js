@@ -1,0 +1,13 @@
+/***********************
+ *@name CSS
+ *@author Jo.gel
+ *@date 2019/1/17 0017
+ ***********************/
+.hello{
+    color: red;
+    background: url("./icon.png") no-repeat;
+}
+h1{
+    color: red;
+    background: green;
+}
