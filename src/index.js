@@ -4,6 +4,8 @@
  * @date 2019/1/17 0017
  ***********************/
 import _ from 'lodash'
+const {uniqueId} = require('lodash')
+const un = require('lodash/uniqueId')
 import './style.css'
 import icon from './icon.png'
 function component() {

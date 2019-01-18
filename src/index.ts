@@ -1,4 +1,9 @@
-const test = function (test:String) {
-    console.info(test);
+const test1 = function (content:string) {
+    const element = document.createElement('h1')
+    element.innerHTML =content
+    element.id='h1'
+    console.log(content)
+    return element
 }
-test('hello world typeScirpt!')
+
+document.body.appendChild(test1('hello typescript world'))

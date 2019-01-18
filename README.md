@@ -13,13 +13,20 @@
 ![init](./demo/init.jpg)
 
 - load 视频
-	- [MSEController] > MediaSource onSourceOpen 打开资源
-	- [FLVDemuxer] > Parsed onMetaData 解析元数据
-	- [FLVDemuxer] > Parsed AVCDecoderConfigurationRecord AVC解码器配置记录
-	- [FLVDemuxer] > Parsed AudioSpecificConfig 解析音频特定配置
-	- [MSEController] > Received Initialization Segment, mimeType: video/mp4;codecs=avc1.64001e 收到视频初始化数据，类型巴拉巴拉
-	- [MSEController] > Received Initialization Segment, mimeType: audio/mp4;codecs=mp4a.40.5 收到音频初始化数据，类型巴拉巴拉
-	- [MSEController] > MediaSource onSourceEnded 媒体资源解析完毕
+	- [MSEController] 
+	> MediaSource onSourceOpen 打开资源
+	- [FLVDemuxer] 
+	> Parsed onMetaData 解析元数据
+	- [FLVDemuxer] 
+	> Parsed AVCDecoderConfigurationRecord AVC解码器配置记录
+	- [FLVDemuxer] 
+	> Parsed AudioSpecificConfig 解析音频特定配置
+	- [MSEController] 
+	> Received Initialization Segment, mimeType: video/mp4;codecs=avc1.64001e 收到视频初始化数据，类型巴拉巴拉
+	- [MSEController] 
+	> Received Initialization Segment, mimeType: audio/mp4;codecs=mp4a.40.5 收到音频初始化数据，类型巴拉巴拉
+	- [MSEController] 
+	> MediaSource onSourceEnded 媒体资源解析完毕
 ## flv 函数结构
 ```js
 
