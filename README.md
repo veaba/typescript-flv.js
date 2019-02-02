@@ -54,6 +54,21 @@ const flvjs = {
 }
 // flve.js 实例
 ```
+## 视频格式与浏览器的支持情况
+
+- MP4 H.264视频编码、AAC音频编码的 MPEG 4 文件
+- WebM VP8视频编码、Vorbis音频编码的 WebM文件
+- Ogg Theora视频编码、Vorbis音频编码的Ogg文件
+
+|浏览器|MP4|WebM|Ogg|
+|----|----|----|----|
+|IE|√|x|x|
+|Chrome|√|√|√|
+|Firefox|√|√|√|
+|Safari|√|x|x|
+|Opera|(25起)√|√|√|
+|||||
+
 ## demo框架
 ### dev
 - webpack
