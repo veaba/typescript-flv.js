@@ -2,6 +2,29 @@
 > 本着学习的目的(typeScript、以及更高的知识点)，于是使用TypeScript重写  @xxk 的flv.js ，原项目 https://github.com/Bilibili/flv.js  ，由于是个人学习的项目，这里强烈不推荐用于生产环境！
 
 > 本来fork 原项目，在上面改动的，结果发现clone 不下来，一直try again (y/n)，于是启用新项目来开发。
+
+
+---------------------------------------------------------------------
+## 如何使用该项目
+```shell 
+git clone https://github.com/veaba/typescript-flv.js.git
+npm install 
+npm run dev  # 会启动一个前台的服务器web页面，8081，并自动生成在内存里面的执行index文件，TODO 后续会生成dist文件夹，比较直观点
+
+```
+## 安排src目录 `♪(^∇^*) `(抄人家的~~ )
+```text
+--/src    
+   -- /core
+   -- /demux
+   -- io
+   -- /player
+   -- /remux
+   -- /utils
+   
+
+```
+---------------------------------------------------------------------
 ## 如何安排从头开始的构建工作？
 `const player = flv.createPlayer()`->`player.attachMediaElement(element)`->`player.play()`
 > init如果失败
