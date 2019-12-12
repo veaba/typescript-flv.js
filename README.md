@@ -62,18 +62,21 @@ npm run dev  # 会启动一个前台的服务器web页面，8081，并自动生�
 // flv_start(){}
 // flvsjs 构造函数
 const flvjs = {
-    BaseLoader(){},
-    ErrorDetails:{},
-    ErrorTypes:{},
-    FlvPlayer(){},
-    LoaderError:{},
-    LoaderStatus:{},
-    LogginControl(){},
-    NativePlayer(){},
-    createPlayer(){},
-    getFeatureList(){},
-    isSupported(){},
-    version:String
+    BaseLoader: ƒ BaseLoader(typeName)
+    ErrorDetails: {NETWORK_EXCEPTION: "Exception", NETWORK_STATUS_CODE_INVALID: "HttpStatusCodeInvalid", NETWORK_TIMEOUT: "ConnectingTimeout", NETWORK_UNRECOVERABLE_EARLY_EOF: "UnrecoverableEarlyEof", MEDIA_MSE_ERROR: "MediaMSEError", …}
+    ErrorTypes: {NETWORK_ERROR: "NetworkError", MEDIA_ERROR: "MediaError", OTHER_ERROR: "OtherError"}
+    Events: {ERROR: "error", LOADING_COMPLETE: "loading_complete", RECOVERED_EARLY_EOF: "recovered_early_eof", MEDIA_INFO: "media_info", METADATA_ARRIVED: "metadata_arrived", …}
+    FlvPlayer: ƒ FlvPlayer(mediaDataSource, config)
+    LoaderErrors: {OK: "OK", EXCEPTION: "Exception", HTTP_STATUS_CODE_INVALID: "HttpStatusCodeInvalid", CONNECTING_TIMEOUT: "ConnectingTimeout", EARLY_EOF: "EarlyEof", …}
+    LoaderStatus: {kIdle: 0, kConnecting: 1, kBuffering: 2, kError: 3, kComplete: 4}
+    LoggingControl: ƒ LoggingControl()
+    NativePlayer: ƒ NativePlayer(mediaDataSource, config)
+    createPlayer: ƒ createPlayer(mediaDataSource, optionalConfig)
+    getFeatureList: ƒ getFeatureList()
+    isSupported: ƒ isSupported()
+    version: (...)
+    get version: ƒ ()
+    __proto__: Object
 }
 // flve.js 实例
 ```
