@@ -1,44 +1,54 @@
-import {BaseLoader,LoaderError,LoaderStatus} from './io/loader'
-import {error_Types,error_Details} from './player/player-errors'
+import {BaseLoader, LoaderError, LoaderStatus} from './io/loader'
+import {error_Types, error_Details} from './player/player-errors'
+import Features from 'core/Features'
+
 class Flv {
-    constructor(x,y){
-        this.x=x
-        this.y=y
-        this.version="1.5.0"
+    // version
+    private version: string;
+    public y: any;
+    public x: any;
+
+    constructor(x: any, y: any) {
+        this.x = x;
+        this.y = y;
+        this.version = "1.5.0"
     }
 
-    // BaseLoader todo
-    BaseLoader:BaseLoader
+    // BaseLoader
+    BaseLoader: BaseLoader;
 
     // ErrorDetails
-    ErrorDetails:error_Details,
+    ErrorDetails = error_Details;
 
     // ErrorTypes
-    ErrorTypes:error_Types
+    ErrorTypes = error_Types;
 
     // Events
 
     // FlvPlayer
 
-    LoaderError:LoaderError
+    LoaderError = LoaderError;
 
-    LoaderStatus:LoaderStatus
+    LoaderStatus = LoaderStatus;
 
     // LoggingControl
 
     // NativePlayer
 
     // createPlayer
-    createPlayer(){
+    createPlayer() {
 
     }
 
     // getFeatureList
-    getFeatureList(){
-
+    getFeatureList() {
+        return Features.getFeatureList
     }
-    // isSupported
 
-    // version
-    
+    // isSupported
+    isSupported() {
+        return Features.supportMSEH264Playback()
+    }
+
+
 }

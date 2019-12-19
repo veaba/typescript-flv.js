@@ -1,7 +1,7 @@
 const path = require('path');
-const CleanWebpackPlugin =  require('clean-webpack-plugin')
-const HtmlWebpackPlugin =  require('html-webpack-plugin')
-const webpack =  require('webpack')
+const CleanWebpackPlugin =  require('clean-webpack-plugin');
+const HtmlWebpackPlugin =  require('html-webpack-plugin');
+const webpack =  require('webpack');
 module.exports = {
 	mode: "development",//模式
 	entry: './src/index.ts',//入口文件

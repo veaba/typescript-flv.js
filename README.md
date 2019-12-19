@@ -51,7 +51,7 @@ npm run dev  # 会启动一个前台的服务器web页面，8081，并自动生�
 	- [MSEController] 
 	> MediaSource onSourceEnded 媒体资源解析完毕
 ## flv 函数结构
-```js
+```html
 
 // 向window 提供的函数
 // flv_destory(){},
@@ -92,7 +92,7 @@ const flvjs = {
 |Chrome|√|√|√|
 |Firefox|√|√|√|
 |Safari|√|x|x|
-|Opera|(25起)√|√|√|
+|Opera|(25以上)√|√|√|
 |||||
 
 ## demo框架
@@ -118,12 +118,48 @@ const flvjs = {
     ---- flvts.all.js   //格式化的代码
     src/
     ---- core/      //核心代码
-    ---- demux/     // 混码？不太明白啥意思，只有一丢丢video相关的概念
+        ---- features.ts
+        ---- media-info.ts
+        ---- media-segment-info.ts
+        ---- mse-controller.ts
+        ---- transmuxer.ts
+        ---- transmuxing-controller.ts
+        ---- transmuxing-events.ts
+        ---- transmuxing-worker.ts 
+    ---- demux/     // 混码？啥意思
+        ---- amf-parser.ts
+        ---- demux-error.ts
+        ---- exp-golomb.ts
+        ---- flv-demuxer.ts
+        ---- sps-parser.ts
     ---- io/        // 输入输出，干吗的？(⊙o⊙)…
+        ---- fetch-stream-loader.ts
+        ---- io-controller.ts                        || doing~ 2019年12月19日17:20:53
+        ---- loader.ts
+        ---- param-seek-handler.ts
+        ---- range-seek-handler.ts
+        ---- speed-sampler.ts
+        ---- websocket-loader.ts
+        ---- xhr-msstream-loader.ts
+        ---- xhr-range-loader.ts
     ---- player/    // 播放器
+        ---- flv-player.ts
+        ---- native-player.ts
+        ---- player-error.ts
+        ---- player-events.ts
     ---- remux/     // 似乎和demux 是相反的意思~
+        ---- aac-silent.ts
+        ---- mp4-generator.ts
+        ---- mp4-remuxer.ts
     ---- utils/     // 工具类函数
+        ---- browser.ts
+        ---- exception.ts
+        ---- logger.ts
+        ---- logging-control.ts
+        ---- polyfill.ts
+        ---- utf8-conv.ts
     ---- flvts.js
+    ---- config.ts
     ---- index.ts
     READEME.md 
 ```
