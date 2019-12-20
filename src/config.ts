@@ -3,7 +3,39 @@
  * @date 2019/12/19 0019
  ***********************/
 
-export const defaultConfig = {};
+export const defaultConfig = {
+    enableWorker: false,
+    enableStashBuffer: true,
+    stashInitialSize: 0,
+
+    isLive: false,
+
+    lazyLoad: true,
+    lazyLoadMaxDuration: 3 * 60,
+    lazyLoadRecoverDuration: 30,
+    deferLoadAfterSourceOpen: true,
+
+    // autoCleanupSourceBuffer:default as false, leave unspecified
+
+    autoCleanupMaxBackwardDuration: 3 * 60,
+    autoCleanupMinBackwardDuration: 2 * 60,
+
+    statisticsInfoReportInterval: 600,
+
+    fixAudioTimestampGap: true,
+
+    accurateSeek: false,
+    seekType: 'range',//range、param、custom
+    seekParamStart: 'bstart',
+    seekParamEnd: 'bend',
+    rangeLoadZeroStart: false,
+    customSeekHandler: "",
+    reuseRedirectedURL: false,
+
+    // 引用策略:保留为未指定
+    headers: Object.create(null),
+    customLoader: Object.create(null)
+};
 
 /*
 * @desc

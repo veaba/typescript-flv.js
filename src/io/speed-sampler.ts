@@ -11,7 +11,7 @@ class SpeedSampler {
     private _totalBytes: number;
     private _lastSecondBytes: number;
     private _lastCheckpoint: number;
-    private _now: any;
+    private readonly _now: any;
 
     constructor() {
         // 毫秒

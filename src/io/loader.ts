@@ -10,7 +10,7 @@ export const LoaderStatus = {
 };
 
 export const LoaderErrors = {
-    OK: 'OK',
+    OK: 'OK',                                                // 正常
     EXCEPTION: "Exception",                                  // 异常
     HTTP_STATUS_CODE_INVALID: "HttpStatusCodeInvalid",       // http status code 无效
     CONNECTING_TIMEOUT: "ConnectingTimeout",                 // 连接超时

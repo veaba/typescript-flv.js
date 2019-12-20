@@ -4,7 +4,7 @@
  * @date 2019/12/20 0020
  * @todo 想把这个文件，改写为socket.io
  ***********************/
-import {BaseLoader, LoaderStatus, LoaderError} from "./loader";
+import {BaseLoader, LoaderStatus, LoaderErrors} from "./loader";
 import {RuntimeException} from "../utils/exception";
 
 // 用于WebSocket直播流上的FLV
@@ -54,7 +54,7 @@ class WebsocketLoader extends BaseLoader {
             this._status = LoaderStatus.kError;
             let info = {code: e.code, msg: e.message};
             if (this._onError) {
-                this._onError(LoaderError.EXCEPTION, info)
+                this._onError(LoaderErrors.EXCEPTION, info)
             } else {
                 throw new RuntimeException(info.msg)
             }
@@ -103,7 +103,7 @@ class WebsocketLoader extends BaseLoader {
             let info = {code: -1, msg: 'Unsupported WebSocket message type: ' + e.data.constructor.name};
 
             if (this._onError) {
-                this._onError(LoaderError.EXCEPTION, info)
+                this._onError(LoaderErrors.EXCEPTION, info)
             } else {
                 throw  new RuntimeException(info.msg)
             }
@@ -117,7 +117,7 @@ class WebsocketLoader extends BaseLoader {
             msg: e.message
         };
         if (this._onError) {
-            this._onError(LoaderError.EXCEPTION, info)
+            this._onError(LoaderErrors.EXCEPTION, info)
         } else {
             throw new RuntimeException(info.msg)
         }

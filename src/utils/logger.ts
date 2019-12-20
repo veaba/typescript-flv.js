@@ -7,24 +7,24 @@
 import {EventEmitter} from 'events'
 
 class Log {
-    private GLOBAL_TAG: string;
-    private FORCE_GLOBAL_TAG: boolean;
-    private ENABLE_INFO: boolean;
-    private ENABLE_WARN: boolean;
-    private ENABLE_VERBOSE: boolean;
-    private ENABLE_CALLBACK: boolean;
-    private emitter: any;
-    private ENABLE_ERROR: boolean;
-    private ENABLE_DEBUG: boolean;
-    private static FORCE_GLOBAL_TAG: boolean;
-    private static GLOBAL_TAG: string;
-    private static emitter: any;
-    private static ENABLE_CALLBACK: boolean;
-    private static ENABLE_ERROR: boolean;
-    private static ENABLE_INFO: boolean;
-    private static ENABLE_WARN: boolean;
-    private static ENABLE_DEBUG: boolean;
-    private static ENABLE_VERBOSE: boolean;
+    protected GLOBAL_TAG: any;
+    protected static GLOBAL_TAG: any;
+    protected ENABLE_INFO: boolean;
+    protected ENABLE_WARN: boolean;
+    protected ENABLE_VERBOSE: boolean;
+    protected ENABLE_ERROR: boolean;
+    protected ENABLE_DEBUG: boolean;
+    protected ENABLE_CALLBACK: boolean;
+    protected emitter: any;
+    static FORCE_GLOBAL_TAG: boolean; //TODO
+    protected static emitter: any;
+    protected static ENABLE_CALLBACK: boolean;
+    protected static ENABLE_ERROR: boolean;
+    protected static ENABLE_INFO: boolean;
+    protected static ENABLE_WARN: boolean;
+    protected static ENABLE_DEBUG: boolean;
+    protected static ENABLE_VERBOSE: boolean;
+    private FORCE_GLOBAL_TAG: boolean; //TODO
 
     constructor() {
         this.GLOBAL_TAG = "flv.js";

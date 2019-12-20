@@ -168,8 +168,8 @@ const flvjs = {
         ---- range-seek-handler.ts                   || finished 2019年12月20日
         ---- speed-sampler.ts                        || finished 2019年12月20日
         ---- websocket-loader.ts                     || finished 2019年12月20日
-        ---- xhr-msstream-loader.ts                  || todo
-        ---- xhr-range-loader.ts                     || todo
+        ---- xhr-msstream-loader.ts                  || finished 2019年12月20日
+        ---- xhr-range-loader.ts                     || finished 2019年12月20日
     ---- player/    // 播放器
         ---- flv-player.ts
         ---- native-player.ts

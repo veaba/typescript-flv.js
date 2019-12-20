@@ -5,6 +5,7 @@
     "module": "es6",
     "target": "es6",
     "allowJs": true,
+    "types": ["node"],
     "sourceMap": true
   },
   "exclude": [

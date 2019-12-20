@@ -16,7 +16,7 @@ import WebSocketLoader from './websocket-loader'
 import FetchStreamLoader from './fetch-stream-loader'
 import MozChunkedLoader from './xhr-moz-chunked-loader'
 import {RuntimeException, IllegalStateException, InvalidArgumentException} from "../utils/exception";
-import {LoaderError} from "./loader";
+import {LoaderErrors} from "./loader";
 
 class IOController {
     private readonly TAG: string;
@@ -527,11 +527,11 @@ class IOController {
         if (this._isEarlyEofReconnecting) {
             // 为EarlyOf自动重新连接失败，向上层抛出不可恢复的EarlyOf错误
             this._isEarlyEofReconnecting = false;
-            type = LoaderError.UNRECOVERABLE_EARLY_EOF
+            type = LoaderErrors.UNRECOVERABLE_EARLY_EOF
         }
 
         switch (type) {
-            case LoaderError.EARLY_EOF:
+            case LoaderErrors.EARLY_EOF:
                 if (!this._config.isLive) {
                     // 如果不是直播流，则执行内部http重新连接
                     if (this._totalLength) {
@@ -546,12 +546,12 @@ class IOController {
                     // 否则：我们不做知道长度，则抛出 UnrecoverableEarlyEof
                 }
                 // 直播流：向上层抛出不可恢复的早期错误
-                type = LoaderError.UNRECOVERABLE_EARLY_EOF;
+                type = LoaderErrors.UNRECOVERABLE_EARLY_EOF;
                 break;
-            case LoaderError.UNRECOVERABLE_EARLY_EOF:
-            case LoaderError.CONNECTING_TIMEOUT:
-            case LoaderError.HTTP_STATUS_CODE_INVALID:
-            case LoaderError.EXCEPTION:
+            case LoaderErrors.UNRECOVERABLE_EARLY_EOF:
+            case LoaderErrors.CONNECTING_TIMEOUT:
+            case LoaderErrors.HTTP_STATUS_CODE_INVALID:
+            case LoaderErrors.EXCEPTION:
                 break
         }
         if (this._onError) {

@@ -12,7 +12,7 @@
 * stream spec  https://streams.spec.whatwg.org/
 * @static 这里是干嘛的？？
 * */
-import {BaseLoader, LoaderError, LoaderStatus} from "./loader";
+import {BaseLoader, LoaderErrors, LoaderStatus} from "./loader";
 import {RuntimeException} from "../utils/exception";
 import Browser from '../utils/browser'
 
@@ -80,7 +80,7 @@ class FetchStreamLoader extends BaseLoader {
                     if (this._contentLength !== null && this._receivedLength < this._contentLength) {
                         // Report Early-EOF
                         this._status = LoaderStatus.kError;
-                        const type = LoaderError.EARLY_EOF;
+                        const type = LoaderErrors.EARLY_EOF;
                         const info = {code: -1, msg: 'Fetch stream meet Early-EOF'};
 
                         if (this._onError) {
@@ -126,10 +126,10 @@ class FetchStreamLoader extends BaseLoader {
 
                 // 网络错误
                 if ((err.code === 19 || err.message === 'network error') && (this._contentLength === null || (this._receivedLength < this._contentLength))) {
-                    type = LoaderError.EARLY_EOF;
+                    type = LoaderErrors.EARLY_EOF;
                     info = {code: err.code, msg: 'Fetch stream meet Early-EOF'}
                 } else {
-                    type = LoaderError.EXCEPTION;
+                    type = LoaderErrors.EXCEPTION;
                     info = {code: err.code, msg: err.message}
                 }
                 if (this._onError) {

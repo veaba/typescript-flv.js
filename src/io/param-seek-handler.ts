@@ -5,8 +5,8 @@
  ***********************/
 
 class ParamSeekHandler {
-    private _endName: string;
-    private _startName: string;
+    private readonly _endName: string;
+    private readonly _startName: string;
 
     constructor(paramStart: string, paramEnd: string) {
         this._startName = paramStart;

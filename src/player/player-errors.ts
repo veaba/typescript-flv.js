@@ -1,4 +1,4 @@
-import {LoaderError} from '../io/loader'
+import {LoaderErrors} from '../io/loader'
 import DemuxErrors from '../demux/demux-errors'
 
 export const error_Types = {
@@ -10,10 +10,10 @@ export const error_Types = {
  * @decs 错误的详情
  */
 export const error_Details = {
-    NETWORK_EXCEPTION:LoaderError.EXCEPTION,
-    NETWORK_STATUS_CODE_INVALID:LoaderError.HTTP_STATUS_CODE_INVALID,
-    NETWORK_TIMEOUT:LoaderError.CONNECTING_TIMEOUT,
-    NETWORD_UNRECOVERABLE_EARLY_EOF:LoaderError.UNRECOVERABLE_EARLY_EOF,
+    NETWORK_EXCEPTION:LoaderErrors.EXCEPTION,
+    NETWORK_STATUS_CODE_INVALID:LoaderErrors.HTTP_STATUS_CODE_INVALID,
+    NETWORK_TIMEOUT:LoaderErrors.CONNECTING_TIMEOUT,
+    NETWORD_UNRECOVERABLE_EARLY_EOF:LoaderErrors.UNRECOVERABLE_EARLY_EOF,
 
     NETWORD_MSE_ERROR:"MediaMSEError",
 
