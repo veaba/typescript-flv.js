@@ -7,6 +7,9 @@ import {BaseLoader} from "./loader";
 
 class RangeLoader extends BaseLoader {
 
+    static isSupport() {
+        return false;
+    }
 }
 
 export default RangeLoader

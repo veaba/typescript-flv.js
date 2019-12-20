@@ -4,8 +4,16 @@
  * @date 2019/12/19 0019
  ***********************/
 class SpeedSampler {
-    get lastSecondKBps(){
-        return 'todo'
+    get lastSecondKBps():number{
+        return 1
+    }
+
+    reset() {
+
+    }
+
+    addBytes(byteLength: number) {
+
     }
 }
 
