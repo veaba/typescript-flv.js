@@ -40,5 +40,8 @@ export interface ioControllerDataSourceT {
     url?: string
     redirectedURL?: string
     filesize?: number
+}
 
+export interface dataSourceT {
+    url: string
 }

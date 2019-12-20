@@ -5,6 +5,33 @@
 
 
 ---------------------------------------------------------------------
+
+## 开发
+- todo 后续增加socket去替换原生的websocket
+- 关于ts 的一些内容
+    - private 与private static 的区别
+```text
+private GLOBAL_TAG: string;
+private FORCE_GLOBAL_TAG: boolean;
+private ENABLE_INFO: boolean;
+private ENABLE_WARN: boolean;
+private ENABLE_VERBOSE: boolean;
+private ENABLE_CALLBACK: boolean;
+private emitter: any;
+private ENABLE_ERROR: boolean;
+private ENABLE_DEBUG: boolean;
+private static FORCE_GLOBAL_TAG: boolean;
+private static GLOBAL_TAG: string;
+private static emitter: any;
+private static ENABLE_CALLBACK: boolean;
+private static ENABLE_ERROR: boolean;
+private static ENABLE_INFO: boolean;
+private static ENABLE_WARN: boolean;
+private static ENABLE_DEBUG: boolean;
+private static ENABLE_VERBOSE: boolean;
+
+```
+
 ## 如何使用该项目
 ```shell 
 git clone https://github.com/veaba/typescript-flv.js.git
@@ -118,7 +145,7 @@ const flvjs = {
     ---- flvts.all.js   //格式化的代码
     src/
     ---- core/      //核心代码
-        ---- features.ts
+        ---- features.ts                              || finished 2019年12月19日
         ---- media-info.ts
         ---- media-segment-info.ts
         ---- mse-controller.ts
@@ -133,15 +160,15 @@ const flvjs = {
         ---- flv-demuxer.ts
         ---- sps-parser.ts
     ---- io/        // 输入输出，干吗的？(⊙o⊙)…
-        ---- fetch-stream-loader.ts
-        ---- io-controller.ts                        || doing~ 2019年12月19日17:20:53
-        ---- loader.ts
-        ---- param-seek-handler.ts
-        ---- range-seek-handler.ts
-        ---- speed-sampler.ts
-        ---- websocket-loader.ts
-        ---- xhr-msstream-loader.ts
-        ---- xhr-range-loader.ts
+        ---- fetch-stream-loader.ts                  || finished 2019年12月20日
+        ---- io-controller.ts                        || finished 2019年12月19日
+        ---- loader.ts                               || finished 2019年12月20日
+        ---- param-seek-handler.ts                   || finished 2019年12月20日
+        ---- range-seek-handler.ts                   || finished 2019年12月20日
+        ---- speed-sampler.ts                        || finished 2019年12月20日
+        ---- websocket-loader.ts                     || finished 2019年12月20日
+        ---- xhr-msstream-loader.ts                  || todo
+        ---- xhr-range-loader.ts                     || todo
     ---- player/    // 播放器
         ---- flv-player.ts
         ---- native-player.ts
@@ -152,9 +179,9 @@ const flvjs = {
         ---- mp4-generator.ts
         ---- mp4-remuxer.ts
     ---- utils/     // 工具类函数
-        ---- browser.ts
-        ---- exception.ts
-        ---- logger.ts
+        ---- browser.ts                               || finished 2019年12月20日
+        ---- exception.ts                             || finished 2019年12月20日
+        ---- logger.ts                                || finished 2019年12月20日
         ---- logging-control.ts
         ---- polyfill.ts
         ---- utf8-conv.ts

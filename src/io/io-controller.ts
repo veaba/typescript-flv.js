@@ -7,10 +7,15 @@ import {createDefaultConfig} from "../config";
  ***********************/
 import {ioControllerT, ioControllerDataSourceT, ioControllerConfigT} from '../d.ts/flv'
 // import {SPEED_NORMALIZE_LIST} from '../config'
-// IOController:ioControllerT;
+import Log from '../utils/logger'
 import SpeedSampler from './speed-sampler'
 import RangeLoader from './xhr-range-loader';
-import RangeSeekHandler from './xhr-seek-handler'
+import RangeSeekHandler from './range-seek-handler'
+import ParamSeekHandler from './param-seek-handler'
+import WebSocketLoader from './websocket-loader'
+import FetchStreamLoader from './fetch-stream-loader'
+import MozChunkedLoader from './xhr-moz-chunked-loader'
+import {RuntimeException, IllegalStateException, InvalidArgumentException} from "../utils/exception";
 import {LoaderError} from "./loader";
 
 class IOController {
@@ -488,7 +493,7 @@ class IOController {
 
             if (consumed < buffer.byteLength) {
                 if (dropUnconsumed) {
-                    Log(this.TAG, `${remain} 刷新缓冲区时保留未使用的数据字节，已丢弃`)
+                    Log.w(this.TAG, `${remain} 刷新缓冲区时保留未使用的数据字节，已丢弃`)
                 } else {
                     if (consumed > 0) {
                         let stashArray = new Uint8Array(this._stashBuffer, 0, this._bufferSize);
@@ -552,7 +557,7 @@ class IOController {
         if (this._onError) {
             this._onError(type, data)
         } else {
-            throw new RuntimeException('IOException:', data.msg)
+            throw new RuntimeException('IOException:' + data.msg)
         }
     }
 
