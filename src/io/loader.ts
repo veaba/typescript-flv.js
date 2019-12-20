@@ -9,7 +9,7 @@ export const LoaderStatus = {
     kComplete: 4
 };
 
-export const LoaderError = {
+export const LoaderErrors = {
     OK: 'OK',
     EXCEPTION: "Exception",                                  // 异常
     HTTP_STATUS_CODE_INVALID: "HttpStatusCodeInvalid",       // http status code 无效
@@ -36,8 +36,8 @@ export class BaseLoader {
     protected _onComplete: any;
     protected _onDataArrival: any;
     protected _needStash: boolean;
-    private _onURLRedirect: null;
-    private _onContentLengthKnown: any;
+    protected _onURLRedirect: any;
+    protected _onContentLengthKnown: any;
     private readonly _type: string;
 
     constructor(typeName: string | undefined) {

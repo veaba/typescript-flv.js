@@ -8,6 +8,7 @@
 
 ## 开发
 - todo 后续增加socket去替换原生的websocket
+- 后续可以考虑用xhr 异步的方式
 - 关于ts 的一些内容
     - private 与private static 的区别
 ```text
