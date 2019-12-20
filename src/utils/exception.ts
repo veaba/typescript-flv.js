@@ -5,6 +5,7 @@
  ***********************/
 export class RuntimeException {
     private readonly _message: string;
+
     constructor(message: string) {
         this._message = message
     }
@@ -44,7 +45,7 @@ export class InvalidArgumentException extends RuntimeException {
 }
 
 export class NotImplementedException extends RuntimeException {
-    constructor(message: string='Unimplemented abstract function') {
+    constructor(message: string = 'Unimplemented abstract function') {
         super(message);
     }
 

@@ -76,6 +76,7 @@ class MSStreamLoader extends BaseLoader {
         this._bufferLimit = 10 * 1024 * 1024; //16MB
         this._lastTimeBufferSize = 0;
         this._isReconnecting = false
+
     }
 
     /* *************** public methods ****************** */
@@ -326,7 +327,5 @@ class MSStreamLoader extends BaseLoader {
         }
     }
 }
-
-this._currentRedirectedURL = null;
 
 export default MSStreamLoader

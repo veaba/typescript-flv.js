@@ -5,7 +5,7 @@
  ***********************/
 
 class NativePlayer {
-    constructor(mds:any,optionalConfig:any) {
+    constructor(mds: any, optionalConfig: any) {
     }
 }
 

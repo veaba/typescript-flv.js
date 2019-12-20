@@ -16,7 +16,8 @@ import {
 class Features {
 
     // videoElement: any=undefined;
-    private static videoElement:any=undefined;
+    private static videoElement: any = undefined;
+
     constructor() {
     }
 
@@ -26,7 +27,7 @@ class Features {
     * @Fix: const w:any=window;，给一个中间的变量
     * */
     static supportMSEH264Playback() {
-        const w:any=window;
+        const w: any = window;
         return w.MediaSource && w.MediaSource.isTypeSupported(MEDIA_SOURCE_TYPE)
     }
 
